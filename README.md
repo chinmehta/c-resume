@@ -12,4 +12,10 @@ cd c-resume
 
 ## step 3: create micro apps 
 
-ng generate application login-signup
+ng generate application --routing --style scss main-app
+ng generate application --routing --style scss login-signup
+ng generate application --routing --style scss details-form
+ng generate application --routing --style scss list-details
+ng generate application --routing --style scss pick-template
+ng generate application --routing --style scss display-resume
+ng generate application --routing --style scss save-as-pdf
