@@ -25,7 +25,7 @@
             "main": "projects/main-app/src/main.ts",
             "polyfills": "projects/main-app/src/polyfills.ts",
             "tsConfig": "projects/main-app/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/main-app/src/favicon.ico",
               "projects/main-app/src/assets"
@@ -97,7 +97,7 @@
             "polyfills": "projects/main-app/src/polyfills.ts",
             "tsConfig": "projects/main-app/tsconfig.spec.json",
             "karmaConfig": "projects/main-app/karma.conf.js",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/main-app/src/favicon.ico",
               "projects/main-app/src/assets"
@@ -133,7 +133,7 @@
             "main": "projects/login-signup/src/main.ts",
             "polyfills": "projects/login-signup/src/polyfills.ts",
             "tsConfig": "projects/login-signup/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/login-signup/src/favicon.ico",
               "projects/login-signup/src/assets"
@@ -208,7 +208,7 @@
             "polyfills": "projects/login-signup/src/polyfills.ts",
             "tsConfig": "projects/login-signup/tsconfig.spec.json",
             "karmaConfig": "projects/login-signup/karma.conf.js",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/login-signup/src/favicon.ico",
               "projects/login-signup/src/assets"
@@ -244,7 +244,7 @@
             "main": "projects/details-form/src/main.ts",
             "polyfills": "projects/details-form/src/polyfills.ts",
             "tsConfig": "projects/details-form/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/details-form/src/favicon.ico",
               "projects/details-form/src/assets"
@@ -319,7 +319,7 @@
             "polyfills": "projects/details-form/src/polyfills.ts",
             "tsConfig": "projects/details-form/tsconfig.spec.json",
             "karmaConfig": "projects/details-form/karma.conf.js",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/details-form/src/favicon.ico",
               "projects/details-form/src/assets"
@@ -355,7 +355,7 @@
             "main": "projects/list-details/src/main.ts",
             "polyfills": "projects/list-details/src/polyfills.ts",
             "tsConfig": "projects/list-details/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/list-details/src/favicon.ico",
               "projects/list-details/src/assets"
@@ -430,7 +430,7 @@
             "polyfills": "projects/list-details/src/polyfills.ts",
             "tsConfig": "projects/list-details/tsconfig.spec.json",
             "karmaConfig": "projects/list-details/karma.conf.js",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/list-details/src/favicon.ico",
               "projects/list-details/src/assets"
@@ -466,7 +466,7 @@
             "main": "projects/pick-template/src/main.ts",
             "polyfills": "projects/pick-template/src/polyfills.ts",
             "tsConfig": "projects/pick-template/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/pick-template/src/favicon.ico",
               "projects/pick-template/src/assets"
@@ -541,7 +541,7 @@
             "polyfills": "projects/pick-template/src/polyfills.ts",
             "tsConfig": "projects/pick-template/tsconfig.spec.json",
             "karmaConfig": "projects/pick-template/karma.conf.js",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/pick-template/src/favicon.ico",
               "projects/pick-template/src/assets"
@@ -577,7 +577,7 @@
             "main": "projects/display-resume/src/main.ts",
             "polyfills": "projects/display-resume/src/polyfills.ts",
             "tsConfig": "projects/display-resume/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/display-resume/src/favicon.ico",
               "projects/display-resume/src/assets"
@@ -652,7 +652,7 @@
             "polyfills": "projects/display-resume/src/polyfills.ts",
             "tsConfig": "projects/display-resume/tsconfig.spec.json",
             "karmaConfig": "projects/display-resume/karma.conf.js",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/display-resume/src/favicon.ico",
               "projects/display-resume/src/assets"
@@ -688,7 +688,7 @@
             "main": "projects/save-as-pdf/src/main.ts",
             "polyfills": "projects/save-as-pdf/src/polyfills.ts",
             "tsConfig": "projects/save-as-pdf/tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/save-as-pdf/src/favicon.ico",
               "projects/save-as-pdf/src/assets"
@@ -763,7 +763,7 @@
             "polyfills": "projects/save-as-pdf/src/polyfills.ts",
             "tsConfig": "projects/save-as-pdf/tsconfig.spec.json",
             "karmaConfig": "projects/save-as-pdf/karma.conf.js",
-            "inlineStyleLanguage": "scss",
+            
             "assets": [
               "projects/save-as-pdf/src/favicon.ico",
               "projects/save-as-pdf/src/assets"
