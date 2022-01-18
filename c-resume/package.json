@@ -3,8 +3,24 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "build:element": "npm run build -- --prod --single-bundle true",
+    "build:element:details-form": "npm run build:element --project details-form",
+    "build:element:display-resume": "npm run build:element --project display-resume",
+    "build:element:list-details": "npm run build:element --project list-details",
+    "build:element:login-signup": "npm run build:element --project login-signup",
+    "build:element:pick-template": "npm run build:element --project pick-template",
+    "build:element:save-as-pdf": "npm run build:element --project save-as-pdf",
+    "build:elements": "run-p build:element:**",
+    "start": "run-p \"start:* -- --prod --single-bundle true\"",
+    "prestart": "ngcc",
     "build": "ng build",
+    "start:details-form": "ng serve --project details-form",
+    "start:display-resume": "ng serve --project display-resume",
+    "start:list-details": "ng serve --project list-details",
+    "start:login-signup": "ng serve --project login-signup",
+    "start:main-app": "ng serve --project main-app",
+    "start:pick-template": "ng serve --project pick-template",
+    "start:save-as-pdf": "ng serve --project save-as-pdf",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -21,6 +37,8 @@
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
     "@ngneat/tailwind": "^7.0.3",
+    "document-register-element": "^1.7.2",
+    "ng-micro-frontend": "^2.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
@@ -39,7 +57,9 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "npm-run-all": "^4.1.5",
     "tailwindcss": "latest",
-    "typescript": "~4.3.5"
+    "typescript": "~4.3.5",
+    "webpack-manifest-plugin": "^3.0.0"
   }
 }

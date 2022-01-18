@@ -19,3 +19,13 @@ ng generate application --routing --style scss list-details
 ng generate application --routing --style scss pick-template
 ng generate application --routing --style scss display-resume
 ng generate application --routing --style scss save-as-pdf
+
+## step 4: add ng-micro-frontend 
+
+ng add ng-micro-frontend --project main-app --type shell --port 4200
+ng add ng-micro-frontend --project login-signup --type micro --port 4210
+ng add ng-micro-frontend --project details-form --type micro --port 4220
+ng add ng-micro-frontend --project list-details --type micro --port 4230
+ng add ng-micro-frontend --project pick-template --type micro --port 4240
+ng add ng-micro-frontend --project display-resume --type micro --port 4250
+ng add ng-micro-frontend --project save-as-pdf --type micro --port 4260 
