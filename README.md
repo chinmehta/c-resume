@@ -4,7 +4,7 @@ Resume Builder Application Using Angular Demonstrating Micro Frontends and Clean
 
 ## step 1: create workspace
 
-> ng new c-resume --createApplication
+> ng new c-resume --createApplication="false"
 
 ## step 2: switch to workspace
 
