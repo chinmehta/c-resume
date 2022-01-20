@@ -6,28 +6,26 @@ import { AppComponent } from './app.component';
 import { createCustomElement } from '@angular/elements';
 import { environment } from '../environments/environment';
 import { MicroFrontendModule } from 'ng-micro-frontend';
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthService } from './infrastructure/api/auth.service';
+import { SignUpComponent } from './ui/pages/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MicroFrontendModule,
-    provideFirebaseApp(() => initializeApp({
-      apiKey: "AIzaSyBEQuS7fzK009d06ugN77_EAJUjOu6cAg0",
-      authDomain: "c-resume.firebaseapp.com",
-      projectId: "c-resume",
-      storageBucket: "c-resume.appspot.com",
-      messagingSenderId: "795927745187",
-      appId: "1:795927745187:web:ee4b5a3815409a001e2516",
-      measurementId: "G-S5J4QFN8P5"
-    }))
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
 })
 export class AppModule implements DoBootstrap { 
   public constructor(
