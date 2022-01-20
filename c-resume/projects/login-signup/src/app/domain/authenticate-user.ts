@@ -8,6 +8,7 @@ export class AuthenticateUser {
   async signup(userDetails: INewUser) {
     console.log(this.authService.getUserAuthStatus());
     await this.authService.signup(userDetails);
+    // this.authService.createUser(userDetails);
     // this.emailAddress = this.password = '';
   }
 

@@ -80,7 +80,10 @@ export class AuthService implements AuthRepository {
 
   async createUser(userDetails: INewUser) {
     const db = getDatabase();
-    //convert into DTO / interface once tested
+    /** 
+     * TODO: convert into DTO / interface once tested
+     * replace email with uid 
+    **/
     await set(ref(db, 'users/' + userDetails.email), {
       username: userDetails.name,
       email: userDetails.email,
