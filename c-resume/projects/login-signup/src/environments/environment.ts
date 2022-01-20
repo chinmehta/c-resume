@@ -11,7 +11,8 @@ export const environment = {
     storageBucket: "c-resume.appspot.com",
     messagingSenderId: "795927745187",
     appId: "1:795927745187:web:ee4b5a3815409a001e2516",
-    measurementId: "G-S5J4QFN8P5"
+    measurementId: "G-S5J4QFN8P5",
+    databaseURL: "https://c-resume-default-rtdb.firebaseio.com"
   }
 };
 
