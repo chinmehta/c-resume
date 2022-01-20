@@ -3,9 +3,7 @@ import { INewUser } from '../core/inew-user.interface';
 import { AuthService } from '../infrastructure/api/auth.service';
 
 export class AuthenticateUser {
-  constructor(
-      public authService: AuthService
-      ) {}
+  constructor(public authService: AuthService) {}
 
   async signup(userDetails: INewUser) {
     console.log(this.authService.getUserAuthStatus());
@@ -14,8 +12,8 @@ export class AuthenticateUser {
   }
 
   async login(userDetails: IExistingUser) {
-      await this.authService.login(userDetails);
-      console.log(this.authService.getUserAuthStatus());
+    await this.authService.login(userDetails);
+    console.log(this.authService.getUserAuthStatus());
     // this.emailAddress = this.password = '';
   }
 

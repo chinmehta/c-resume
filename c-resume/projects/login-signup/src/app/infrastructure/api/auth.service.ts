@@ -4,53 +4,43 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { IExistingUser } from '../../core/iexisting-user.interface';
 import { INewUser } from '../../core/inew-user.interface';
+import { AuthRepository } from '../repository/auth-repository.repository';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class AuthService {
+export class AuthService implements AuthRepository {
+  // isLoggedIn = false;
 
-  isLoggedIn=false;
+  constructor(private firebaseAuth: AngularFireAuth) {}
 
-  constructor(private firebaseAuth: AngularFireAuth) {
-    // this.user = firebaseAuth.authState;
-  }
-
-
-   
   // To sign up a new user.
   async signup(userDetails: INewUser) {
-    await this.firebaseAuth
-      .auth
+    await this.firebaseAuth.auth
       .createUserWithEmailAndPassword(userDetails.email, userDetails.password)
-      .then((value: any) => {
-        console.log('Success! User is successfully registered.', value.user.email);
+      .then((userCredential: any) => {
+        const user = userCredential.user;
+        console.log('Success! User is successfully registered.');
       })
       .catch((error: any) => {
-        // this.err = error.message;
         console.log('Something went wrong:', error);
       });
   }
- 
-  // To login a valid user.
+
   async login(userDetails: IExistingUser) {
-    await this.firebaseAuth
-      .auth
+    await this.firebaseAuth.auth
       .signInWithEmailAndPassword(userDetails.email, userDetails.password)
-      .then((value: any) => {
+      .then((userCredential: any) => {
+        const user = userCredential.user;
         console.log('User successfully logged in!');
       })
       .catch((error: any) => {
-        // this.err = error.message;
         console.log('Something went wrong:', error);
       });
   }
- 
-  // To logout an authenticated user.
+
   async logout() {
-    await this.firebaseAuth
-      .auth
-      .signOut();
+    await this.firebaseAuth.auth.signOut();
   }
 
   async getUserAuthStatus() {
