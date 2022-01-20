@@ -3,7 +3,13 @@ import { Injectable } from '@angular/core';
 import { IExistingUser } from '../../core/iexisting-user.interface';
 import { INewUser } from '../../core/inew-user.interface';
 import { AuthRepository } from '../repository/auth-repository.repository';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, } from 'firebase/auth';
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from 'firebase/auth';
 import { getDatabase, ref, set, onValue, child, get } from 'firebase/database';
 
 @Injectable({
@@ -11,8 +17,6 @@ import { getDatabase, ref, set, onValue, child, get } from 'firebase/database';
 })
 export class AuthService implements AuthRepository {
   // isLoggedIn = false;
-
-  public database = getDatabase();
 
   constructor() {}
 
@@ -27,6 +31,7 @@ export class AuthService implements AuthRepository {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        // this.createUser(userDetails);
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -70,6 +75,16 @@ export class AuthService implements AuthRepository {
       } else {
         // User is signed out
       }
+    });
+  }
+
+  async createUser(userDetails: INewUser) {
+    const db = getDatabase();
+    //convert into DTO / interface once tested
+    await set(ref(db, 'users/' + userDetails.email), {
+      username: userDetails.name,
+      email: userDetails.email,
+      phone: userDetails.phone
     });
   }
 }
